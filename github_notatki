@@ -5,7 +5,8 @@ POLECENIA
 ADNOTACJA 
 NOWE REPO
 
-
+https://guides.github.com
+..tu jest jakiś manual
 
 
 JAK ZACZĄĆ (repozytorium na github.com)
@@ -123,7 +124,7 @@ git show <ID_commit> {pokazuje szczegóły commita}
 
 
 ADNOTACJA
--------------------------------------------------
+---------
 
 git init - inicjalizuje repozytorimu , można też ściągnąć całe repo z GitHuba pisząc git clone: {adreshttp/lub ssh} 
 Jak chcesz mieć repo nie na githuie to załóż jakieś gdzie tam chcesz initem , teraz przejdź do folderu w którym będziesz miał swoje osobiste "local"-ne miejsce , i w nim pisze: git add {nazwa skrótowa, zamiast pisać ciągle adre} {adres http/ssh/ścierzka_do_katagu/.git/}
