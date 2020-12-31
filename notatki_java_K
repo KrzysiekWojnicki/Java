@@ -1,0 +1,60 @@
+DAY nie wiem
+############
+	..metoda instancji to taka gdzie ktworzymy instancje metody
+	Integer nazwa = 4 ;
+	nazwa...
+	.. "nazwa" jest instancją metody
+	
+	..Metody statyczne nie potrzbują instancji i możmy odwoływać się do nich bezpośrednio
+	Integer.max(x,y) ;
+	.. zwróci większą 
+	Integer.compare(x,y)
+	.. zwróci 0 jak równe, 1 jak <x -1 jak >x
+	.. to jest prawidłowy sposób porównywania
+	.. można jeszcze urzyć '==' ale on bardziej pasuje do prymitywnych typów 
+	.. ponieawrz przechowują one wartości, a obiekty tylko odwołania
+	.. jednak dziła w jawie pewna optymalizacja gdy tworzymy dwa stringi o tych zamych warorściach
+	.. wtedy '==' zwróci TRUE
+
+	String str = "300" ;
+	Integer a = Integer.valueOf(str);
+	int b = Integer.parseInt(str);
+	..pierwszy zmieni string na 'OBIEKT' int
+	.. drugi na 'INT'
+
+	String a = "dupa";
+	a.charAt(1);
+	..zwróci 'u' ..poza zasięgiem np:6 wysypie się
+
+	String x = "jakiś dlugi string";
+	System.out.println(x.charAt(x.length()a -1));
+	.. '-1' bo indeks zaczyna się od zera, dostaniemy ost litere
+	System.out.println(x.concat("plus jeszcze jakieś");
+	..tosamo co:
+	x += "plus string..";
+
+	x.contains("plus");
+	..zwróci TRUE bo 'x' zawiera ciąg "plus"
+	.. wraca TRUE or FALSE
+
+	System.out.println(x.indexOf("dlugi");
+	..zwróci 6 bo od tego indeksu zaczyna się szukany string
+	.. można też podać drugi argumet który będzie de facto miejscem w indeksie od którego zacznie poszukiwania
+	System.out.println(x.indexOf("x.indexOf("dlugi") + 1));
+	.. znajdzie pierwsze wystąpienie doda jeden i będzie szukać od tego miejsca
+	.. przydatne jak  chcemy szukać np. drugiego wystąpienia
+	x.lastIndexOf("dlugi"); 
+	..odnajduje ostatnie wystąpienie "dlugi"
+
+	x.toLowerCase()
+	..na małe litery
+	x.strip()
+	..odziera z znaków spacjalnych jak /t itp.
+	x.substring(2,5)
+	..string od 2 indeksu do 5
+	x.repeat(2)
+	..wudrukuje 2 razy
+	x.equals("string")
+	..zwróci FALSE bo string jest różny
+
+
