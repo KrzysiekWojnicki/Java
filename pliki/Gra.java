@@ -9,25 +9,28 @@ public class Gra {
 	Menu m = new Menu();
 	//m.pokazMenu();
 	//Bron b = new Bron();
-	//b.miecz(3);
+	//System.out.println(b.Miecz(2,10));
 	//Bron.miecz(3);
 	//int d = Bron.miecz();
-	Kreator p = new Kreator();
+	//Kreator p = new Kreator();
 	//p.Postac();
 	//Kreator.Postac();
-	Test7 t = new Test7();
+	//Test11 t = new Test11();
 	//Test8.Hhh("health")t.Nnn(2,0);
-	//t.Nnn(2,3);
-	//t.Nnn(1,6);
-	Test10 i = new Test10();
-	//i.Ooo(100);
-	//i.Rrr(1, 70)
-	//i.Ttt();
-	//int dd = i.Hhh(h);
-	//Bron b = new Bron();
-	//int bonus = b.Miecz(2, 3);
-	Akcja a = new Akcja();
-	a.Walka(200, 0);//hp na poczatek/start i iteraca walki
+	//System.out.println(Test11.Nnn(1, 0));
+	//Kreator.Wojownik("marian");
+	//t.Kto();
+
+	Kreator k =new Kreator();
+ 	Ja j = new Ja();
+	 j.setName(k.podajImie());
+	 String x = k.wybierzKlase();
+	 j.setKlas(x);
+	 j.stworzKlase(x);
+	 j.pokazAtrybuty();
+
+	 Akcja a = new Akcja();
+	a.Walka(j.hp,j.bonus,j.st, 0);//hp,bonus,stamina na poczatek/start i iteraca walki
 
 
 	//System.out.printf("jeden %d %ni dwa %d",a,f);
