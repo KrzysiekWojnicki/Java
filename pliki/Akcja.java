@@ -5,18 +5,16 @@ import java.util.Formatter;
 public class Akcja{
 
     public void Walka(int hp,int bonus, int st, int iteracja){
-        if(hp == 100 ){//tu hest BUG, bo pierwasz walka powinna zaczynać się od parametru
+        //if(hp == 100 ){//tu hest BUG, bo pierwasz walka powinna zaczynać się od parametru
             // ..wybranego prze gracza, np; klasy postaci i odpowiadajcego mu hp
             // Oraz bład? z iteracą
-            int hpGracza = NPC.Postac1("health");
-        }
-        int hpGracza = hp;
-        //int hpGracza = NPC.Postac1("health");
-        //int hpPrzeciwnika = NPC.Postac1("health");
-        Lobuz l = new Lobuz();
-        int hpPrzeciwnika = l.hp; //tutaj moze byc jakis mechanizm losujacy
-        Bron b = new Bron();
+        //    int hpGracza = NPC.Postac1("health");
+        //}
+        Noz noz = new Noz();
         CzyKoniec r = new CzyKoniec();
+        Lobuz l = new Lobuz(); //klasa przeciwnika. W przyszłosci losowana lub zalezna od exp.
+        int hpPrzeciwnika = l.hp; //inicjacja
+        int hpGracza = hp;//inicjacja
         int punkt;//sprawdza ktora to iteracja walki
         if(iteracja == 0){
              punkt = 0;
@@ -28,8 +26,8 @@ public class Akcja{
         System.out.println("\n WALKA !!!!!\n");
 
         while(hpGracza > 0 && hpPrzeciwnika > 0){
-            
-            int ciosGracza = b.Miecz(st, bonus);//ile ciosow(st) i jaki (bonus)
+            //tu powinien byc jakis wybór np: apteczka czy atak
+            int ciosGracza = noz.Cios(st)+bonus;//dmg = cios nozem + bonus postaci
             hpPrzeciwnika = hpPrzeciwnika - ciosGracza;
             System.out.printf("twoje zdrowie = %d%n",hpGracza) ;
             System.out.printf("gracz zadaja cios za: %d DMG%nprzeciwnik ma: %d hp%n",ciosGracza,hpPrzeciwnika);
@@ -40,8 +38,7 @@ public class Akcja{
                     r.Rrr(punkt,hpGracza,bonus,st,true);// odesłanie do high score- nie ma jeszcze
                     break;
                 }//if gracza
-
-            int ciosPrzeciwnika = b.Miecz(l.st, l.bonus);//1 ciosy, 0 bonus dmg
+            int ciosPrzeciwnika = noz.Cios(l.st)+l.bonus;//dmg = cios nozem + bonus postaci
             hpGracza = hpGracza - ciosPrzeciwnika;
             System.out.printf("przeciwnik zadaja cios za: %d DMG%ngracz ma: %d hp%n",ciosPrzeciwnika,hpGracza);
             System.out.println("--------------");

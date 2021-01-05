@@ -8,6 +8,57 @@ public class Gra {
 
 	Menu m = new Menu();
 	//m.pokazMenu();
+	//to jest ok
+	/*
+	Kreator k =new Kreator();
+	Ja j = new Ja();
+	 j.setName(k.podajImie());
+	 String x = k.wybierzKlase();
+	 j.setKlas(x);
+	 j.stworzKlase(x);
+	 j.pokazAtrybuty();
+
+	 Akcja a = new Akcja();
+	a.Walka(j.hp,j.bonus,j.st, 0);//hp,bonus,stamina na poczatek/start i iteraca walki
+	//koniec ok
+
+	/*Inventory t =new Inventory();
+	Test12a ta =new Test12a();
+	Apteczka a = new Apteczka();
+
+	t.CzyJestWLiscie(ta.name,1);
+	t.CzyJestWLiscie(ta.name,1);
+	t.CzyJestWLiscie(ta.name2,4);
+	t.CzyJestWLiscie(ta.name3,3);
+	t.CzyJestWLiscie(a.name, 2);
+
+	System.out.println("--------");
+	t.ShowListe();
+	t.IleJestCzego();
+	t.ilejetstego(ta.name);
+
+	System.out.println("--------");
+	t.UsunZListy(ta.name2, 5);
+	t.UsunZListy(ta.name3, 3);
+	t.UsunZListy("paździeż", 3);
+	t.ShowListe();
+	System.out.println("--------");
+	t.IleJestCzego();
+	System.out.println("--------");
+	t.ilejetstego(ta.name);
+//koniec OK
+*/
+	Akcja a = new Akcja();
+	a.Walka(100, 1, 1, 0);
+	/*Noz n = new Noz();
+	for(int i=0;i<10;i++){
+	System.out.println(n.Cios(1));
+	}
+	Apteczka ap = new Apteczka();
+	System.out.println(ap.Lecz(85));
+*/
+
+
 	//Bron b = new Bron();
 	//System.out.println(b.Miecz(2,10));
 	//Bron.miecz(3);
@@ -21,16 +72,8 @@ public class Gra {
 	//Kreator.Wojownik("marian");
 	//t.Kto();
 
-	Kreator k =new Kreator();
- 	Ja j = new Ja();
-	 j.setName(k.podajImie());
-	 String x = k.wybierzKlase();
-	 j.setKlas(x);
-	 j.stworzKlase(x);
-	 j.pokazAtrybuty();
 
-	 Akcja a = new Akcja();
-	a.Walka(j.hp,j.bonus,j.st, 0);//hp,bonus,stamina na poczatek/start i iteraca walki
+
 
 
 	//System.out.printf("jeden %d %ni dwa %d",a,f);
