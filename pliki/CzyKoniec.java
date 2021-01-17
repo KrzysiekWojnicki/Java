@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 
-public class  CzyKoniec{
+public class  CzyKoniec{// rezygnuje z tej klasy bo robi za mało
 
-	public void Rrr(int i, int hp,int bonus,int st, boolean co){
-		Scanner skan = new Scanner(System.in);
+	public void Rrr(int hp, int i, boolean co){
+		/*Scanner skan = new Scanner(System.in);
 		char c;
 		if(co == true){
 			System.out.printf("SCORE: %d %n",i);
@@ -12,26 +12,29 @@ public class  CzyKoniec{
 			c = skan.next().charAt(0);
 			switch(c){
 				case 'y':
-				Akcja d = new Akcja();
-				d.Walka(hp,bonus,st,i);
+				//Akcja d = new Akcja();//odznaczone na potrzeby testu12b
+				//tb.Walka(hp,bonus,st,i);
+				Akcja a = new Akcja();
+				a.CoRobic(hp,i);
 				break;
 				case 'n':
-				Kkk(i);
+				KoniecGry(i);
 				break;
 				default :
-				Kkk(i);
-
-			}
-			skan.close();
+				KoniecGry(i);
+			}*/
+			if(co == true){
+			Akcja a = new Akcja();
+			a.CoRobic(hp,i);
+			//skan.close();
 		}else{
-			Kkk(i);
+			KoniecGry(i);
 		}
 	}//Rrr
-	public void Kkk(int ileWalk){
+	public void KoniecGry(int ileWalk){
 			System.out.println("koniec gry");
 			System.out.println("twoj wynik to: "+ ileWalk);
 
-	}//Kkk
+	}//KoniecGry
 
-
-}//test
+}//CzyKoniec
